@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R 777 hello olleh
+sudo chmod --reference=hello olleh
