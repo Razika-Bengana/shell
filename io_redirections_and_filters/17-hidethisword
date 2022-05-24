@@ -1,2 +1,0 @@
-#!/bin/bash
-grip -v bin /etc/passwd
