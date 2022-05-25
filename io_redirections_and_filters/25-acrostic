@@ -1,2 +1,2 @@
 #!/bin/bash
-head -9 | cut -c-1
+head -c -9 | cut -c-1 | paste -d ' '
