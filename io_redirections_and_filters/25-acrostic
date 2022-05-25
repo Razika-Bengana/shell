@@ -1,2 +1,2 @@
 #!/bin/bash
-head -c -9 | cut -c-1 | paste -s | tr -d ' space]'
+head -c -9 | cut -c-1 | paste -s | tr -d '[:blank:]'
