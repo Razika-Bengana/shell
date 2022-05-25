@@ -1,0 +1,2 @@
+#!/bin/bash
+initial=$(echo $word | head -c 1)"
