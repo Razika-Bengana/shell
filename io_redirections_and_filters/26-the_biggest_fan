@@ -1,2 +1,2 @@
 #!/bin/bash
-sort *.tsv | head -11 | sort -nrk | uniq -u | cut -d ' ' -f -1 | rev
+sort *.tsv | head -11 | cut -f -1 | sort -rnk 1 | uniq -c | rev | tr -s ' ' | cut -d ' ' -f 2 
