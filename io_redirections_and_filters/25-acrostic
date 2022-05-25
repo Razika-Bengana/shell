@@ -1,2 +1,2 @@
 #!/bin/bash
-paste -s | cut -c1 | tr -d
+awk '{print $1}' 
