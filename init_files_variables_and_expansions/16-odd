@@ -1,2 +1,2 @@
 #!/bin/bash
-grep -o '[A-Z]\{2\}-[A-Z0-9]\{4\}' | xargs -L2 
+grep *
