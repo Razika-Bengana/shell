@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+IFS=':'
+while read -r user pass uid gid desc home shell; do
+    echo "$user:$shell'"
+    done </etc/passwd
