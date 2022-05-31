@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # display the content of the file /etc/passwd: only the username, the user id and the home directory path for the user
 FILENAME="/etc/passwd"
-while IFS= read -r username password userid groupid comment homedir cmdshell
+while IFS= read -r line
 do
-echo "$username $userid $homedir"
+echo "$line"
 done < $FILENAME
