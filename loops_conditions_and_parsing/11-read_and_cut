@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-IFS=':'
-while read -r user pass uid gid desc home shell; do
-    echo "$user:$shell'"
-    done </etc/passwd
+# display the content of the file /etc/passwd: only the username, the user id and the home directory path for the user
+FILENAME="/etc/passwd"
+while IFS= read -r username password userid groupid comment homedir cmdshell
+do
+echo "$username $userid $homedir"
+done < $FILENAME
