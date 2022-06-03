@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # manage my process
+pid=/var/run/my_process.pid
+
 start() {
     ./manage_my_process &
-    echo "$!" > /var/run/my_process.pid
+    echo "$!" > "$pid"
 }
 
 stop() {
-    pkill -f "$(cat /var/run/my_process.pid)" &&
-	rm -f /var/run/my_process.pid
+    sudo kill -15 "$(cat $pid)" &&
+	rm -f "$pid"
 }
 
 case "$1" in
