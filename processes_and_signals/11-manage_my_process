@@ -2,11 +2,11 @@
 # manage my process
 start() {
     ./manage_my_process &
-    echo $$ > /var/run/my_process.pid
+    echo "$!" > /var/run/my_process.pid
 }
 
 stop() {
-    sudo kill -15 "$(cat /var/run/my_process.pid)" &&
+    pkill -f "$(cat /var/run/my_process.pid)" &&
 	rm -f /var/run/my_process.pid
 }
 
