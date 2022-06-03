@@ -4,10 +4,12 @@ start() {
     ./manage_my_process &
     echo $$ > /var/run/my_process.pid
 }
+
 stop() {
     sudo kill -15 "$(cat /var/run/my_process.pid)" &&
 	rm /var/run/my_process.pid
 }
+
 case "$1" in
 start)
 start
